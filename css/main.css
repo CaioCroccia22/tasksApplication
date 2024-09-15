@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: auto;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -12,6 +12,13 @@ header{
     border-bottom: 10px solid rgb(57, 4, 106);
     text-transform: uppercase;
     font-style: italic;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1{
+    text-align: center;
+
 }
 
 .div-container{
@@ -23,10 +30,25 @@ header{
     display: flex;
     flex-direction: row;
     text-align: center;
-    
+    align-items: center;
+    justify-content: center;
+}
+
+form label{
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+form input{
+    border: none;
+    border-bottom: 2px solid black;
+    margin-right: 30px;
 }
 
 form button{
+    display: flex;
     background-color: #009432;
     border: none;
     font-weight: bold;
@@ -34,4 +56,5 @@ form button{
     cursor: pointer;
     border-radius: 10%;
     color: #fff;
+    margin-left: 20px;
 }
