@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,10 +18,10 @@
             <label for="task">Digite a tarefa:</label>
             <input type="text" id="task" placeholder="Digite a tarefa" required>
 
-            <label for="time">Digite a tarefa:</label>
-            <input type="time" id="time" placeholder="Digite a tarefa" required>
+            <label for="time">Digite o tempo da tarefa</label>
+            <input type="time" id="time" required>
 
-            <button id="btn-submit">Adicionar tarefa</button>
+            <button id="btn-submit" type="button">Adicionar tarefa</button>
         </form>
     </div>
     <div class="task-container">
@@ -37,5 +38,6 @@
             
         </ul>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </body>
 </html>
