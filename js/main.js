@@ -1,26 +1,30 @@
 
 $('form button').click(function(event){
     event.preventDefault();
+    //Selecionando os valores nos inputs
     const inputTask = $('#task').val();
     const inputTime = $('#time').val();
-    console.log(inputTask);
-    console.log(inputTime);
+   
 
-    const newElement = $('<li "display:none;" ></li>');
-    // console.log(newElement);
+    //Criando o novo elemento
+    const newElement = $('<li></li>');
+    
     $(`<div class="task-item" > ${inputTask} </div>`).appendTo(newElement);
     $(`<div> ${inputTime} hrs </div>`).appendTo(newElement);
-    $(`<div><button class="btn-cancel">Cancelar</button></div>`).appendTo(newElement);
+    $(`<div><button class="btn-cancel">Riscar Tarefa</button></div>`).appendTo(newElement);
 
     
-    // console.log(newElement);
+    ///Exibir a tarefa
+    $('.task-container').css('display','block');
+
+
+    // Adicionando o elemento a tag ul
     newElement.appendTo('ul');
 
 
-    console.log(newElement);
-
-    newElement.find('.btn-cancel').click(function(){
-        // newElement.fadeOut(100000); 
+    
+    //Adicionando o evento de clicar no botão
+    newElement.find('.btn-cancel').click(function(){ 
         newElement.find('.task-item').css('text-decoration', 'line-through');
     });
 })
