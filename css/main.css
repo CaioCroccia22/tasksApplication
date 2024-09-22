@@ -93,27 +93,33 @@ li:hover{
     transform: translateY(-5px);
 }
 
-.task-container ul li{
+
+.task-item-container{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
-    color: #333;
-    align-items: center;
-}
-
-.task-container ul li button {
-    background-color: #ff5252;
-    border: none;
-    color: white;
     padding: 10px;
+    border: 1px solid #6a1b9a;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 50px;
+}
+
+.task-item{
+    flex-grow: 1;
+    word-wrap: break-word;
+}
+
+.task-time {
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.btn-cancel {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
 }
-
-.task-container ul li button:hover {
-    background-color: #ff0000;
-}
-
