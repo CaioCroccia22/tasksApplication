@@ -8,20 +8,21 @@ $('form button').click(function(event){
 
     //Criando o novo elemento
     const newElement = $('<li></li>');
+
+    const taskContainer = $('<div class="task-item-container"></div>');
     
-    $(`<div class="task-item" > ${inputTask} </div>`).appendTo(newElement);
-    $(`<div> ${inputTime} hrs </div>`).appendTo(newElement);
-    $(`<div><button class="btn-cancel">Riscar Tarefa</button></div>`).appendTo(newElement);
+    $(`<div class="task-item" > ${inputTask} </div>`).appendTo(taskContainer);
+    $(`<div class="task-time">${inputTime} hrs</div>`).appendTo(taskContainer);
+    $(`<div><button class="btn-cancel">Riscar Tarefa</button></div>`).appendTo(taskContainer);
 
     
-    ///Exibir a tarefa
-    $('.task-container').css('display','block');
+    newElement.append(taskContainer);
 
+    
+    $('.task-container').css('display', 'block');
 
-    // Adicionando o elemento a tag ul
+    
     newElement.appendTo('ul');
-
-
     
     //Adicionando o evento de clicar no botão
     newElement.find('.btn-cancel').click(function(){ 
